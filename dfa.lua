@@ -8,7 +8,7 @@ function buildDFA (states, finalStates, startState, sigma, delta)
 	for _,v in ipairs(states) do
 		funTable[v] = function(str, index, seq)
 			seq = seq .. ", " .. v
-			if(str:len() <  index) then return finalStates[v],seq or false end --if at end of string, check if we are a final state
+			if(str:len() <  index) then return finalStates[v] or false,seq end --if at end of string, check if we are a final state
 			
 			local cur = str:sub(index,index) --read the character
 
