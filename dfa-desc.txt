@@ -1,0 +1,3 @@
+m1: recognizes 1^+
+m2: recognizes (0+1)*01(0+1)*
+m3: recognizes a(ab)*aa
